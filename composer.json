@@ -1,0 +1,46 @@
+{
+  "name": "elivz/transient",
+  "description": "Store variables in Twig code which will be available to other templates for the duration of the page load.",
+  "type": "craft-plugin",
+  "version": "1.0.0",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "craft-plugin",
+    "transient",
+    "data",
+    "variable",
+    "session"
+  ],
+  "support": {
+    "docs": "https://github.com/elivz/transient/blob/master/README.md",
+    "issues": "https://github.com/elivz/transient/issues"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Eli Van Zoeren",
+      "homepage": "https://elivz.com"
+    }
+  ],
+  "require": {
+    "craftcms/cms": "^3.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "elivz\\transient\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Transient",
+    "handle": "transient",
+    "hasCpSettings": false,
+    "hasCpSection": false,
+    "changelogUrl": "https://raw.githubusercontent.com/elivz/transient/master/CHANGELOG.md",
+    "components": {
+      "transientService": "elivz\\transient\\services\\TransientService"
+    },
+    "class": "elivz\\transient\\Transient"
+  }
+}
