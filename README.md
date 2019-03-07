@@ -29,40 +29,56 @@ To install the plugin, follow these instructions.
 
 ### Set a Variable
 
-    {% do set_transient('title', entry.title) %}
+```twig
+{% do set_transient('title', entry.title) %}
+```
 
 or
 
-    {% do craft.transient.set('title', entry.title) %}
+```twig
+{% do craft.transient.set('title', entry.title) %}
+```
 
 This stores a variable for later use. The first parameter is the key to store it under, or key. The second parameter is the value to save.
 
-### Get a Variable
+### Output a Variable
 
-    {{ get_transient('title') }}
+```twig
+{{ get_transient('title') }}
+```
 
 or
 
-    {{ craft.transient.get('title') }}
+```twig
+{{ craft.transient.get('title') }}
+```
 
-This outputs a previously-stored variable. The first and only parameter is the key to retrieve.
+This gets a previously-stored variable. The first and only parameter is the key to retrieve.
 
 ### Append to a Variable
 
-    {% do append_transient('viewed articles', entry.id) %}
+```twig
+{% do append_transient('viewed articles', entry.id) %}
+```
 
 or
 
-    {% do craft.transient.append('viewed articles', entry.id) %}
+```twig
+{% do craft.transient.append('viewed articles', entry.id) %}
+```
 
 Append a new value to an existing item. This only works with arrays and strings. The the existing value is an array, you are able to append either an simple string value or another array, in which case they will be merged.
 
 ### Increment a Variable
 
-    {% do increment_transient('times') %}
+```twig
+{% do increment_transient('times') %}
+```
 
 or
 
-    {% do craft.transient.increment('times') %}
+```twig
+{% do craft.transient.increment('times') %}
+```
 
 Increment a counter. There is an optional second parameter, which is the step size to increment by. If it is left off, the value will be incremented by 1.
